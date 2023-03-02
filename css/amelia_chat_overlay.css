@@ -1,0 +1,206 @@
+/* template CSS */
+.chat-overlay {
+    position: fixed;
+    width: 376px;
+    height: 535px;
+    bottom: 24px;
+    right: 24px;
+    z-index: 90;
+}
+    
+.chat-overlay-closed .header-logo {
+    display: none;
+}
+    
+.chat-overlay-banner {
+    display: none;
+    height: 100px;
+    background: rgb(247, 247, 247);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
+}
+    
+.chat-overlay-banner.chat-overlay-close {
+    display: none;
+}
+    
+.chat-overlay-banner-title {
+    padding-bottom: 0.2rem;
+    font-weight: 800;
+    }
+    
+.chat-overlay-banner-helper {
+    opacity: 0.50;
+    padding-bottom: 0.8rem;
+    }
+    
+.header-logo {
+    height: 30px;
+    background: rgb(247, 247, 247);
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: none;
+}
+    
+.header-logo img, .header-logo svg {
+    height: auto;
+}
+    
+.header-logo img.chat-overlay-close {
+    margin-left: auto;
+    align-self: center;
+    height: 50%;
+    padding: 0.5rem;
+}
+    
+.header-logo svg.chat-overlay-close {
+    margin-left: auto;
+    align-self: center;
+    height: 90%;
+    width: 8%;
+    cursor: pointer;
+  }
+    
+.chat-overlay-open {
+    height: 535px;
+}
+    
+.chat-overlay-closed {
+    height: 71px;
+}
+    
+.chat-overlay-wrapper {
+    width: 376px;
+    height: 448px;
+}
+    
+.chat-overlay-header-mobile {
+    display: none;
+}
+    
+.chat-overlay-header {
+    position: relative;
+    height: 56px;
+    width: 56px;
+    border: 1px solid #58c3e6;
+    background: #000;
+    margin-left: auto;
+    border-radius: 50%;
+    box-shadow: 1rem 1rem 5rem rgb(0 0 0 / 50%);
+}
+    
+#receiver {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+    
+#receiver.chat-overlay-close {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+    
+#receiver.chat-overlay-open {
+    height: 100%;
+    opacity: 1;
+    overflow: hidden;
+}
+    
+.chat-overlay-header-img {
+    position: absolute;
+    max-width: 24px;
+    max-height: 24px;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+    
+.chat-overlay-header-img.open {
+    opacity: 0;
+}
+    
+.absolute-cart-box {
+    display: none;
+}
+    
+@media only screen and (max-width: 768px) {
+    .chat-overlay {
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    }
+    
+    .chat-overlay .header-logo {
+    display: none;
+    }
+    
+    .chat-overlay-header-mobile {
+    display: flex;
+    width: inherit;
+    height: 9%;
+    background: rgb(247, 247, 247);
+    }
+    
+    .chat-overlay-header-mobile img {
+    height: 30%;
+    padding: 1rem;
+    align-self: center;
+    }
+    
+    .chat-overlay-header-mobile svg.chat-overlay-close {
+    padding: 0.7rem;
+    width: 45px;
+    margin-left: auto;
+    height: 100%;
+    }
+    
+    .chat-overlay-header-mobile img.logo {
+    height: 80%;
+    padding: 1rem;
+    }
+    
+    .chat-overlay-header-mobile.chat-overlay-close {
+    display: none;
+    }
+    
+    #receiver {
+    border-radius: 0;
+    }
+    
+    #receiver.chat-overlay-close {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    }
+    
+    #receiver.chat-overlay-open {
+    height: 91%;
+    opacity: 1;
+    overflow: hidden;
+    }
+    
+    .chat-overlay-open {
+    height: 100%;
+    bottom: 0px;
+    right: 0px;
+    }
+    
+    .chat-overlay-closed {
+    height: 205px;;
+    bottom: 24px;
+    right: 24px;
+    width: 88%;
+    }
+    
+    .chat-overlay-wrapper {
+    width: 100%;
+    height: 100%;
+    }
+}
